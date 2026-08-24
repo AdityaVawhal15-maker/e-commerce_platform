@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Your Bag — E-Commerce(Arman)</title>
+<meta name="description" content="Review your bag and check out securely.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='46' fill='%23ff4d24'/%3E%3Ctext x='50' y='68' font-size='52' text-anchor='middle' fill='white' font-family='Arial' font-weight='bold'%3EZ%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="shop">
+
+<div class="scroll-progress"><span id="progress"></span></div>
+<div id="header-root"></div>
+
+<main class="container">
+  <section class="page-hero" style="padding-bottom:26px">
+    <nav class="crumbs"><a href="index.html">Home</a><i>/</i><span>Bag &amp; Checkout</span></nav>
+    <h1 id="page-title">Your bag. is getting ready-(arman)</h1>
+  </section>
+
+  <section class="cart-layout" style="padding-top:0">
+    <div>
+      <div class="cart-list" id="cart-list"></div>
+      <form class="check-form" id="checkout-form" style="margin-top:26px;background:var(--card);border:1.5px solid var(--line);border-radius:var(--r-lg);padding:28px">
+        <h3 style="margin-bottom:16px">Delivery details</h3>
+        <div class="row2">
+          <input required placeholder="First name" autocomplete="given-name">
+          <input required placeholder="Last name" autocomplete="family-name">
+        </div>
+        <input required type="email" placeholder="Email address" autocomplete="email">
+        <input required placeholder="Street address" autocomplete="street-address">
+        <div class="row2">
+          <input required placeholder="City" autocomplete="address-level2">
+          <input required placeholder="ZIP / Postal code" autocomplete="postal-code">
+        </div>
+        <input required placeholder="Card number · 4242 4242 4242 4242" inputmode="numeric">
+        <div class="row2">
+          <input required placeholder="MM / YY" inputmode="numeric">
+          <input required placeholder="CVC" inputmode="numeric" maxlength="4">
+        </div>
+        <button class="btn btn-dark magnetic" type="button" id="checkout-btn" style="margin-top:6px;width:100%">
+          Place order
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </button>
+        <p style="font-size:.75rem;color:var(--mut);text-align:center;margin-top:4px">Demo checkout — no real payment is processed.</p>
+      </form>
+
+      <div class="success-view" id="success-view">
+        <div class="ok-ring">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+        </div>
+        <h2 style="font-size:clamp(1.8rem,4vw,2.8rem)">Order placed. You're golden.</h2>
+        <p style="color:var(--mut);max-width:44ch">Confirmation #ZN-<b id="order-num">000000</b> is on its way to your inbox. Delivery in 2–4 business days.</p>
+        <a href="shop.html" class="btn btn-acc magnetic">Keep shopping
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <aside class="summary">
+      <h3>Order summary</h3>
+      <div class="sum-row"><span>Subtotal</span><span id="sum-sub">$0.00</span></div>
+      <div class="sum-row" id="sum-disc-row" style="display:none;color:var(--acc)"><span>Discount</span><span id="sum-disc">−$0.00</span></div>
+      <div class="sum-row"><span>Shipping</span><span id="sum-ship">—</span></div>
+      <div class="sum-row total"><span>Total</span><span id="sum-total">$0.00</span></div>
+      <div class="promo">
+        <input id="promo-input" placeholder="Promo code (NOVA10)">
+        <button class="btn sm btn-dark" type="button" id="apply-promo">Apply</button>
+      </div>
+      <small id="promo-label" style="color:var(--ok);font-weight:600"></small>
+      <p style="font-size:.78rem;color:var(--mut)">Free carbon-neutral shipping on orders over $150 · 30-day returns · Secure 256-bit checkout</p>
+    </aside>
+  </section>
+</main>
+
+<div id="footer-root"></div>
+<div id="drawer-root"></div>
+<div id="search-root"></div>
+<div id="toast-root"></div>
+<div id="cursor-root"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/motion@10.18.0/motion.min.js"></script>
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+<script src="js/cart.js"></script>
+</body>
+</html>
