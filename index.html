@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ZENITH — Future-grade essentials</title>
+<meta name="description" content="ZENITH is a next-gen commerce experience. Premium audio, wearables, tech and more — engineered for motion.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='46' fill='%23ff4d24'/%3E%3Ctext x='50' y='68' font-size='52' text-anchor='middle' fill='white' font-family='Arial' font-weight='bold'%3EZ%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="scroll-progress"><span id="progress"></span></div>
+<div id="header-root"></div>
+
+<main>
+  <div class="container">
+    <section class="hero" id="top">
+      <div class="blob b1" data-parallax="0.12"></div>
+      <div class="blob b2" data-parallax="-0.1"></div>
+
+      <div class="hero-copy">
+        <span class="eyebrow" data-hero>New drop · FW26 Collection</span>
+        <h1 aria-label="Gear that moves you.">
+          <span class="w"><span>Gear</span></span>
+          <span class="w"><span>that</span></span><br>
+          <span class="w"><span><em>moves</em></span></span>
+          <span class="w"><span>you.</span></span>
+        </h1>
+        <p class="lede" data-hero>Premium tech &amp; lifestyle essentials, curated for people who refuse the ordinary. Free shipping over $150 — always.</p>
+        <div class="hero-cta" data-hero>
+          <a href="#featured" class="btn btn-acc magnetic">Shop the drop
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a href="#collections" class="btn btn-ghost magnetic">Explore collections</a>
+        </div>
+        <div class="hero-stats" data-hero>
+          <div><div class="num"><span data-count="25000">0</span>+</div><div class="lbl">Happy customers</div></div>
+          <div><div class="num">4.<span data-count="9">0</span>★</div><div class="lbl">Average rating</div></div>
+          <div><div class="num"><span data-count="120">0</span>+</div><div class="lbl">Curated brands</div></div>
+        </div>
+      </div>
+
+      <div class="hero-stage">
+        <canvas id="gl" data-hero></canvas>
+        <div class="float-chip fc1" data-float>
+          <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=120&q=70" alt="Aura Studio Headphones">
+          <div>Aura Studio<br><small>$299 · ★ 4.9</small></div>
+        </div>
+        <div class="float-chip fc2" data-float>
+          <img src="https://images.unsplash.com/photo-1590658268037-6bf12165a8df?auto=format&fit=crop&w=120&q=70" alt="Nova Pods Pro">
+          <div>Nova Pods Pro<br><small>-28% today only</small></div>
+        </div>
+        <div class="float-chip fc3" data-float><span class="dot"></span> 2,481 orders shipped this week</div>
+      </div>
+
+      <div class="scroll-cue">Scroll<span></span></div>
+    </section>
+  </div>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="track" id="mq-track">
+      <div class="item">Free shipping over $150 <i>✦</i> 30-day returns <i>✦</i> 2-year warranty <i>✦</i> Carbon-neutral delivery <i>✦</i> Members get 10% back <i>✦</i></div>
+    </div>
+  </div>
+
+  <section id="collections">
+    <div class="container">
+      <div class="sec-head" data-reveal>
+        <div>
+          <span class="eyebrow">Collections</span>
+          <h2 style="margin-top:12px">Shop by vibe</h2>
+          <p>Six worlds of obsessively-curated gear. Pick your lane.</p>
+        </div>
+        <a href="shop.html" class="link-arrow magnetic">View all products
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg>
+        </a>
+      </div>
+      <div class="cat-grid">
+        <a class="cat-card" data-reveal data-tilt href="shop.html?cat=Audio">
+          <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80" alt="Audio collection" loading="lazy">
+          <div class="cat-info"><div><h3>Audio</h3><span>24 products</span></div><span class="cat-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg></span></div>
+        </a>
+        <a class="cat-card" data-reveal data-tilt href="shop.html?cat=Wearables">
+          <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=800&q=80" alt="Wearables collection" loading="lazy">
+          <div class="cat-info"><div><h3>Wearables</h3><span>18 products</span></div><span class="cat-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg></span></div>
+        </a>
+        <a class="cat-card" data-reveal data-tilt href="shop.html?cat=Tech">
+          <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?auto=format&fit=crop&w=800&q=80" alt="Tech collection" loading="lazy">
+          <div class="cat-info"><div><h3>Tech</h3><span>31 products</span></div><span class="cat-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg></span></div>
+        </a>
+        <a class="cat-card" data-reveal data-tilt href="shop.html?cat=Footwear">
+          <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=800&q=80" alt="Footwear collection" loading="lazy">
+          <div class="cat-info"><div><h3>Footwear</h3><span>27 products</span></div><span class="cat-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg></span></div>
+        </a>
+        <a class="cat-card" data-reveal data-tilt href="shop.html?cat=Accessories">
+          <img src="https://images.unsplash.com/photo-1572635196237-14b3f281503f?auto=format&fit=crop&w=800&q=80" alt="Accessories collection" loading="lazy">
+          <div class="cat-info"><div><h3>Accessories</h3><span>22 products</span></div><span class="cat-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg></span></div>
+        </a>
+        <a class="cat-card" data-reveal data-tilt href="shop.html?cat=Home">
+          <img src="https://images.unsplash.com/photo-1592078615290-033ee584e267?auto=format&fit=crop&w=800&q=80" alt="Home collection" loading="lazy">
+          <div class="cat-info"><div><h3>Home</h3><span>15 products</span></div><span class="cat-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg></span></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="featured" style="padding-top:0">
+    <div class="container">
+      <div class="sec-head" data-reveal>
+        <div>
+          <span class="eyebrow">Trending now</span>
+          <h2 style="margin-top:12px">Most wanted</h2>
+        </div>
+        <div class="tabs" id="feat-tabs" data-reveal>
+          <button class="chip on" data-feat="All">All</button>
+          <button class="chip" data-feat="Audio">Audio</button>
+          <button class="chip" data-feat="Wearables">Wearables</button>
+          <button class="chip" data-feat="Tech">Tech</button>
+          <button class="chip" data-feat="Footwear">Footwear</button>
+        </div>
+      </div>
+      <div class="grid-products" id="featured-grid"></div>
+      <div style="text-align:center;margin-top:44px" data-reveal>
+        <a href="shop.html" class="btn btn-dark magnetic">Browse everything
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="deals" style="padding-top:0">
+    <div class="container">
+      <div class="deal" data-reveal>
+        <div class="deal-copy">
+          <span class="eyebrow" style="color:var(--acc)">Flash sale</span>
+          <h2>Up to <em>40% off</em><br>weekend drops.</h2>
+          <p style="color:rgba(255,255,255,.6);max-width:44ch">Limited stock on this season's loudest fits and sharpest tech. When it's gone, it's gone.</p>
+          <div class="countdown" id="countdown">
+            <div class="cd-box"><b id="cd-d">00</b><span>Days</span></div>
+            <div class="cd-box"><b id="cd-h">00</b><span>Hrs</span></div>
+            <div class="cd-box"><b id="cd-m">00</b><span>Min</span></div>
+            <div class="cd-box"><b id="cd-s">00</b><span>Sec</span></div>
+          </div>
+          <div style="margin-top:8px">
+            <a href="shop.html" class="btn btn-acc magnetic">Grab the deals
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="deal-art">
+          <img class="big" src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&w=1000&q=80" alt="Flash sale sneakers" loading="lazy">
+          <span class="deal-tag">-40%</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="perks-wrap" style="padding-top:0">
+    <div class="container perks">
+      <div class="perk" data-reveal>
+        <div class="perk-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 3h15v13H1zM16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
+        <h3>Free shipping</h3><p>On every order above $150, delivered carbon-neutral in 2–4 days.</p>
+      </div>
+      <div class="perk" data-reveal>
+        <div class="perk-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 109-9 9.75 9.75 0 00-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg></div>
+        <h3>30-day returns</h3><p>Changed your mind? Send it back free, no questions asked.</p>
+      </div>
+      <div class="perk" data-reveal>
+        <div class="perk-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></div>
+        <h3>Secure checkout</h3><p>256-bit encrypted payments with Apple Pay, Klarna &amp; more.</p>
+      </div>
+      <div class="perk" data-reveal>
+        <div class="perk-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18v-6a9 9 0 0118 0v6"/><path d="M21 19a2 2 0 01-2 2h-1a2 2 0 01-2-2v-3a2 2 0 012-2h3zM3 19a2 2 0 002 2h1a2 2 0 002-2v-3a2 2 0 00-2-2H3z"/></svg></div>
+        <h3>Human support</h3><p>Real people, 24/7, average reply time under 4 minutes.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="testi-wrap" style="padding-top:0;overflow:hidden">
+    <div class="container sec-head" data-reveal>
+      <div>
+        <span class="eyebrow">Wall of love</span>
+        <h2 style="margin-top:12px">25,000+ five-star humans</h2>
+      </div>
+    </div>
+    <div class="testi-track" id="testi-track"></div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="container">
+      <div class="news-card" data-reveal>
+        <h2>Get 10% off your first order</h2>
+        <p>Join The Circuit — our newsletter with early drops, member pricing and zero spam.</p>
+        <form class="news-form" id="news-form">
+          <input type="email" placeholder="you@futuremail.com" required aria-label="Email address">
+          <button class="btn btn-acc magnetic" type="submit">Sign me up</button>
+        </form>
+        <div class="news-ok" id="news-ok">✓ You're in! Check your inbox for the code.</div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div id="footer-root"></div>
+<div id="drawer-root"></div>
+<div id="search-root"></div>
+<div id="toast-root"></div>
+<div id="cursor-root"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/motion@10.18.0/motion.min.js"></script>
+<script src="https://unpkg.com/three@0.152.2/build/three.min.js"></script>
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+<script src="js/home.js"></script>
+</body>
+</html>
