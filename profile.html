@@ -1,0 +1,1071 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <title>My Account — ZENITH</title>
+  <meta
+    name="description"
+    content="Manage your ZENITH account, orders, wishlist and personal information."
+  >
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    /* Profile page specific styles are in style.css */
+  </style>
+</head>
+
+<body data-page="profile">
+
+  <!-- Scroll progress -->
+  <div class="scroll-progress">
+    <span id="progress"></span>
+  </div>
+
+  <!-- Dynamic header -->
+  <div id="header-root"></div>
+
+
+  <main class="profile-page">
+
+    <!-- =========================================
+         PROFILE HERO
+    ========================================== -->
+    <section class="profile-hero">
+      <div class="container">
+
+        <div class="profile-hero-grid">
+
+          <div class="profile-intro" data-reveal>
+
+            <span class="eyebrow">
+              Your account
+            </span>
+
+            <h1>
+              Welcome back,
+              <em id="profile-hero-name">Alex.</em>
+            </h1>
+
+            <p>
+              Everything you need, right where you left it.
+              Manage your orders, wishlist and personal details.
+            </p>
+
+          </div>
+
+
+          <div class="profile-mini-card" data-reveal data-tilt>
+
+            <div class="profile-avatar">
+              <span id="profile-avatar-letter">A</span>
+
+              <span class="avatar-status"></span>
+            </div>
+
+            <div class="profile-mini-info">
+              <span class="profile-mini-label">
+                ZENITH MEMBER
+              </span>
+
+              <h3 id="profile-mini-name">
+                Alex Johnson
+              </h3>
+
+              <p id="profile-mini-email">
+                alex@example.com
+              </p>
+            </div>
+
+            <button
+              class="profile-edit-btn"
+              id="open-edit-profile"
+              aria-label="Edit profile"
+            >
+              <svg
+                width="17"
+                height="17"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M12 20h9"/>
+                <path d="M16.5 3.5a2.12 2.12 0 013 3L7 19l-4 1 1-4Z"/>
+              </svg>
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =========================================
+         ACCOUNT STATS
+    ========================================== -->
+    <section class="profile-content">
+      <div class="container">
+
+        <div class="account-stats" data-reveal>
+
+          <button
+            class="account-stat"
+            data-profile-tab="orders"
+          >
+            <span class="account-stat-icon orange">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+              >
+                <path d="M6 2h12v4H6z"/>
+                <path d="M5 6h14l1 15H4L5 6Z"/>
+                <path d="M9 10a3 3 0 006 0"/>
+              </svg>
+            </span>
+
+            <span>
+              <b id="orders-count">0</b>
+              <small>Orders</small>
+            </span>
+
+            <svg
+              class="stat-arrow"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M5 12h14"/>
+              <path d="m13 6 6 6-6 6"/>
+            </svg>
+          </button>
+
+
+          <button
+            class="account-stat"
+            data-profile-tab="wishlist"
+          >
+            <span class="account-stat-icon purple">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+              >
+                <path d="M20.8 4.6a5.5 5.5 0 00-7.7 0L12 5.6l-1.1-1a5.5 5.5 0 10-7.8 7.8l1.1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 000-7.8Z"/>
+              </svg>
+            </span>
+
+            <span>
+              <b id="wishlist-count">0</b>
+              <small>Saved items</small>
+            </span>
+
+            <svg
+              class="stat-arrow"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M5 12h14"/>
+              <path d="m13 6 6 6-6 6"/>
+            </svg>
+          </button>
+
+
+          <button
+            class="account-stat"
+            data-profile-tab="spent"
+          >
+            <span class="account-stat-icon green">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+              >
+                <circle cx="12" cy="12" r="9"/>
+                <path d="M15 8.5c-.7-.7-1.7-1-3-1-1.7 0-3 .8-3 2 0 3 6 1.5 6 4.5 0 1.2-1.2 2-3 2-1.3 0-2.4-.4-3.2-1.1"/>
+                <path d="M12 6v12"/>
+              </svg>
+            </span>
+
+            <span>
+              <b id="spent-count">$0</b>
+              <small>Total spent</small>
+            </span>
+
+            <svg
+              class="stat-arrow"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M5 12h14"/>
+              <path d="m13 6 6 6-6 6"/>
+            </svg>
+          </button>
+
+
+          <div class="account-stat member-stat">
+
+            <span class="account-stat-icon dark">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+              >
+                <path d="M12 2l2.5 6.5L21 11l-6.5 2.5L12 20l-2.5-6.5L3 11l6.5-2.5L12 2Z"/>
+              </svg>
+            </span>
+
+            <span>
+              <b>Member</b>
+              <small>Since 2026</small>
+            </span>
+
+          </div>
+
+        </div>
+
+
+        <!-- =========================================
+             PROFILE DASHBOARD
+        ========================================== -->
+
+        <div class="profile-layout">
+
+
+          <!-- LEFT SIDEBAR -->
+          <aside class="profile-sidebar" data-reveal>
+
+            <div class="profile-side-head">
+
+              <span class="profile-side-avatar">
+                <span id="side-avatar-letter">A</span>
+              </span>
+
+              <div>
+                <b id="side-user-name">
+                  Alex Johnson
+                </b>
+
+                <small>
+                  Personal account
+                </small>
+              </div>
+
+            </div>
+
+
+            <nav class="profile-nav">
+
+              <button
+                class="profile-nav-item active"
+                data-profile-nav="overview"
+              >
+                <span>
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                  >
+                    <rect x="3" y="3" width="7" height="7"/>
+                    <rect x="14" y="3" width="7" height="7"/>
+                    <rect x="3" y="14" width="7" height="7"/>
+                    <rect x="14" y="14" width="7" height="7"/>
+                  </svg>
+                </span>
+
+                Overview
+              </button>
+
+
+              <button
+                class="profile-nav-item"
+                data-profile-nav="orders"
+              >
+                <span>
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                  >
+                    <path d="M6 2h12v4H6z"/>
+                    <path d="M5 6h14l1 15H4L5 6Z"/>
+                  </svg>
+                </span>
+
+                My orders
+
+                <small id="nav-orders-count">
+                  0
+                </small>
+              </button>
+
+
+              <button
+                class="profile-nav-item"
+                data-profile-nav="wishlist"
+              >
+                <span>
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                  >
+                    <path d="M20.8 4.6a5.5 5.5 0 00-7.7 0L12 5.6l-1.1-1a5.5 5.5 0 10-7.8 7.8l1.1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 000-7.8Z"/>
+                  </svg>
+                </span>
+
+                Wishlist
+
+                <small id="nav-wishlist-count">
+                  0
+                </small>
+              </button>
+
+
+              <button
+                class="profile-nav-item"
+                data-profile-nav="personal"
+              >
+                <span>
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                  >
+                    <circle cx="12" cy="8" r="4"/>
+                    <path d="M4 21a8 8 0 0116 0"/>
+                  </svg>
+                </span>
+
+                Personal info
+              </button>
+
+
+              <button
+                class="profile-nav-item"
+                data-profile-nav="address"
+              >
+                <span>
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                  >
+                    <path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1116 0Z"/>
+                    <circle cx="12" cy="10" r="2.5"/>
+                  </svg>
+                </span>
+
+                Addresses
+              </button>
+
+            </nav>
+
+
+            <div class="profile-side-footer">
+
+              <a href="shop.html" class="side-shop-link">
+                Continue shopping
+
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M5 12h14"/>
+                  <path d="m13 6 6 6-6 6"/>
+                </svg>
+              </a>
+
+            </div>
+
+          </aside>
+
+
+          <!-- =====================================
+               MAIN ACCOUNT AREA
+          ====================================== -->
+
+          <div class="profile-main">
+
+
+            <!-- OVERVIEW -->
+            <div
+              class="profile-panel active"
+              data-profile-panel="overview"
+            >
+
+              <div class="profile-panel-head">
+                <div>
+                  <span class="eyebrow">
+                    Dashboard
+                  </span>
+
+                  <h2>
+                    Account overview
+                  </h2>
+                </div>
+
+                <span class="profile-date">
+                  <span class="status-dot"></span>
+                  Account active
+                </span>
+              </div>
+
+
+              <!-- Welcome card -->
+              <div class="profile-welcome">
+
+                <div class="welcome-copy">
+
+                  <span class="welcome-label">
+                    ZENITH / MEMBER
+                  </span>
+
+                  <h3>
+                    Built for your
+                    <em>next move.</em>
+                  </h3>
+
+                  <p>
+                    Track your orders, save the things you love
+                    and keep your account details up to date.
+                  </p>
+
+                  <a
+                    href="shop.html"
+                    class="btn btn-acc magnetic"
+                  >
+                    Explore products
+
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.2"
+                      stroke-linecap="round"
+                    >
+                      <path d="M5 12h14"/>
+                      <path d="m13 6 6 6-6 6"/>
+                    </svg>
+                  </a>
+
+                </div>
+
+
+                <div class="welcome-orbit">
+
+                  <div class="orbit-ring orbit-ring-one"></div>
+                  <div class="orbit-ring orbit-ring-two"></div>
+
+                  <div class="orbit-core">
+                    Z
+                  </div>
+
+                  <span class="orbit-dot orbit-dot-one"></span>
+                  <span class="orbit-dot orbit-dot-two"></span>
+
+                </div>
+
+              </div>
+
+
+              <!-- Recent orders -->
+              <div class="profile-section-block">
+
+                <div class="block-head">
+
+                  <div>
+                    <span class="block-eyebrow">
+                      Activity
+                    </span>
+
+                    <h3>
+                      Recent orders
+                    </h3>
+                  </div>
+
+                  <button
+                    class="text-action"
+                    data-profile-nav="orders"
+                  >
+                    View all
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path d="M5 12h14"/>
+                      <path d="m13 6 6 6-6 6"/>
+                    </svg>
+                  </button>
+
+                </div>
+
+                <div
+                  class="orders-list"
+                  id="overview-orders"
+                ></div>
+
+              </div>
+
+
+              <!-- Quick actions -->
+              <div class="quick-actions">
+
+                <button
+                  class="quick-action"
+                  data-profile-nav="personal"
+                >
+                  <span class="quick-icon">
+                    ✦
+                  </span>
+
+                  <div>
+                    <b>Edit profile</b>
+                    <small>Update your details</small>
+                  </div>
+
+                  <span>→</span>
+                </button>
+
+
+                <button
+                  class="quick-action"
+                  data-profile-nav="address"
+                >
+                  <span class="quick-icon">
+                    ⌖
+                  </span>
+
+                  <div>
+                    <b>Manage addresses</b>
+                    <small>Shipping information</small>
+                  </div>
+
+                  <span>→</span>
+                </button>
+
+
+                <a
+                  href="shop.html"
+                  class="quick-action"
+                >
+                  <span class="quick-icon">
+                    +
+                  </span>
+
+                  <div>
+                    <b>Discover more</b>
+                    <small>Find your next essential</small>
+                  </div>
+
+                  <span>→</span>
+                </a>
+
+              </div>
+
+            </div>
+
+
+            <!-- =====================================
+                 ORDERS
+            ====================================== -->
+
+            <div
+              class="profile-panel"
+              data-profile-panel="orders"
+            >
+
+              <div class="profile-panel-head">
+
+                <div>
+                  <span class="eyebrow">
+                    Your purchases
+                  </span>
+
+                  <h2>
+                    My orders
+                  </h2>
+                </div>
+
+                <span class="order-total-label">
+                  <b id="orders-total-label">0</b>
+                  total
+                </span>
+
+              </div>
+
+
+              <div
+                class="orders-list orders-full"
+                id="full-orders"
+              ></div>
+
+            </div>
+
+
+            <!-- =====================================
+                 WISHLIST
+            ====================================== -->
+
+            <div
+              class="profile-panel"
+              data-profile-panel="wishlist"
+            >
+
+              <div class="profile-panel-head">
+
+                <div>
+                  <span class="eyebrow">
+                    Saved for later
+                  </span>
+
+                  <h2>
+                    Your wishlist
+                  </h2>
+                </div>
+
+                <a
+                  href="shop.html"
+                  class="text-action"
+                >
+                  Discover more →
+                </a>
+
+              </div>
+
+
+              <div
+                class="profile-wishlist-grid"
+                id="profile-wishlist-grid"
+              ></div>
+
+            </div>
+
+
+            <!-- =====================================
+                 PERSONAL INFO
+            ====================================== -->
+
+            <div
+              class="profile-panel"
+              data-profile-panel="personal"
+            >
+
+              <div class="profile-panel-head">
+
+                <div>
+                  <span class="eyebrow">
+                    Account details
+                  </span>
+
+                  <h2>
+                    Personal information
+                  </h2>
+                </div>
+
+                <button
+                  class="btn btn-dark sm"
+                  id="edit-personal-btn"
+                >
+                  Edit details
+                </button>
+
+              </div>
+
+
+              <div class="personal-card">
+
+                <div class="personal-avatar">
+                  <span id="personal-avatar-letter">
+                    A
+                  </span>
+                </div>
+
+                <div class="personal-content">
+
+                  <div class="personal-row">
+                    <span>Full name</span>
+                    <b id="personal-name">
+                      Alex Johnson
+                    </b>
+                  </div>
+
+                  <div class="personal-row">
+                    <span>Email</span>
+                    <b id="personal-email">
+                      alex@example.com
+                    </b>
+                  </div>
+
+                  <div class="personal-row">
+                    <span>Phone</span>
+                    <b id="personal-phone">
+                      +91 98765 43210
+                    </b>
+                  </div>
+
+                  <div class="personal-row">
+                    <span>Member since</span>
+                    <b>August 2026</b>
+                  </div>
+
+                </div>
+
+              </div>
+
+
+              <div class="privacy-note">
+
+                <span>✦</span>
+
+                <div>
+                  <b>Your data stays yours.</b>
+                  <p>
+                    This demo stores profile information locally
+                    in your browser. A real production account
+                    should connect this data to your backend.
+                  </p>
+                </div>
+
+              </div>
+
+            </div>
+
+
+            <!-- =====================================
+                 ADDRESS
+            ====================================== -->
+
+            <div
+              class="profile-panel"
+              data-profile-panel="address"
+            >
+
+              <div class="profile-panel-head">
+
+                <div>
+                  <span class="eyebrow">
+                    Delivery
+                  </span>
+
+                  <h2>
+                    Saved addresses
+                  </h2>
+                </div>
+
+                <button
+                  class="btn btn-dark sm"
+                  id="add-address-btn"
+                >
+                  + Add address
+                </button>
+
+              </div>
+
+
+              <div class="address-grid">
+
+                <div class="address-card primary">
+
+                  <div class="address-card-head">
+
+                    <span class="address-type">
+                      DEFAULT
+                    </span>
+
+                    <button
+                      class="address-more"
+                      aria-label="Address options"
+                    >
+                      •••
+                    </button>
+
+                  </div>
+
+                  <h3>
+                    Home
+                  </h3>
+
+                  <p id="address-display">
+                    Alex Johnson<br>
+                    42 Future Avenue<br>
+                    Nashik, Maharashtra 422001<br>
+                    India
+                  </p>
+
+                  <div class="address-card-bottom">
+                    <span class="address-check">
+                      ✓
+                    </span>
+
+                    Default shipping address
+                  </div>
+
+                </div>
+
+
+                <button
+                  class="address-card add-address-card"
+                  id="add-address-card"
+                >
+
+                  <span class="add-circle">
+                    +
+                  </span>
+
+                  <b>
+                    Add another address
+                  </b>
+
+                  <small>
+                    Save a new delivery location
+                  </small>
+
+                </button>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =========================================
+         ACCOUNT BENEFITS
+    ========================================== -->
+
+    <section class="profile-benefits">
+
+      <div class="container">
+
+        <div
+          class="benefit-strip"
+          data-reveal
+        >
+
+          <div class="benefit-item">
+
+            <span class="benefit-icon">
+              ↗
+            </span>
+
+            <div>
+              <b>Free shipping</b>
+              <small>Orders over $150</small>
+            </div>
+
+          </div>
+
+
+          <div class="benefit-item">
+
+            <span class="benefit-icon">
+              ↻
+            </span>
+
+            <div>
+              <b>30-day returns</b>
+              <small>No questions asked</small>
+            </div>
+
+          </div>
+
+
+          <div class="benefit-item">
+
+            <span class="benefit-icon">
+              ✦
+            </span>
+
+            <div>
+              <b>2-year warranty</b>
+              <small>On eligible products</small>
+            </div>
+
+          </div>
+
+
+          <div class="benefit-item">
+
+            <span class="benefit-icon">
+              ♡
+            </span>
+
+            <div>
+              <b>Human support</b>
+              <small>Real people, always</small>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- Dynamic components -->
+  <div id="footer-root"></div>
+  <div id="drawer-root"></div>
+  <div id="search-root"></div>
+  <div id="toast-root"></div>
+  <div id="cursor-root"></div>
+
+
+  <!-- Edit Profile Modal -->
+  <div
+    class="profile-modal"
+    id="profile-edit-modal"
+    aria-hidden="true"
+  >
+
+    <div
+      class="profile-modal-backdrop"
+      data-close-profile-modal
+    ></div>
+
+    <div
+      class="profile-modal-card"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="profile-modal-title"
+    >
+
+      <button
+        class="profile-modal-close"
+        data-close-profile-modal
+        aria-label="Close"
+      >
+        ×
+      </button>
+
+      <span class="eyebrow">
+        Account
+      </span>
+
+      <h2 id="profile-modal-title">
+        Edit your profile
+      </h2>
+
+      <p class="modal-subtitle">
+        Keep your information up to date.
+      </p>
+
+
+      <form id="profile-edit-form">
+
+        <label>
+          Full name
+
+          <input
+            type="text"
+            id="edit-name"
+            required
+            autocomplete="name"
+          >
+        </label>
+
+
+        <label>
+          Email
+
+          <input
+            type="email"
+            id="edit-email"
+            required
+            autocomplete="email"
+          >
+        </label>
+
+
+        <label>
+          Phone
+
+          <input
+            type="tel"
+            id="edit-phone"
+            autocomplete="tel"
+          >
+        </label>
+
+
+        <div class="modal-actions">
+
+          <button
+            type="button"
+            class="btn btn-ghost"
+            data-close-profile-modal
+          >
+            Cancel
+          </button>
+
+          <button
+            type="submit"
+            class="btn btn-acc"
+          >
+            Save changes
+          </button>
+
+        </div>
+
+      </form>
+
+    </div>
+
+  </div>
+
+
+  <!-- Existing libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/motion@10.18.0/motion.min.js"></script>
+  <script src="https://unpkg.com/three@0.152.2/build/three.min.js"></script>
+
+  <!-- Existing project files -->
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+
+  <!-- Profile page -->
+  <script src="js/profile.js"></script>
+
+</body>
+</html>
