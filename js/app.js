@@ -133,11 +133,32 @@ const UI = {
         <div class="nav-shell">
           <a href="index.html" class="logo">ZENITH<i></i></a>
           <nav class="nav-links">
-            <a href="index.html" class="${page==="home"?"active":""}">Home</a>
-            <a href="shop.html" class="${page==="shop"?"active":""}">Shop</a>
-            <a href="index.html#collections">Collections</a>
-            <a href="index.html#deals">Deals</a>
-            <a href="index.html#newsletter">Newsletter</a>
+            <a href="index.html" class="${page==="home"?"active":""}">
+              Home
+            </a>
+
+            <a href="shop.html" class="${page==="shop"?"active":""}">
+              Shop
+            </a>
+
+            <a href="index.html#collections">
+              Collections
+            </a>
+
+            <a href="index.html#deals">
+              Deals
+            </a>
+
+            <a href="index.html#newsletter">
+              Newsletter
+            </a>
+
+            <a
+              href="profile.html"
+              class="${page==="profile"?"active":""}"
+            >
+              Account
+            </a>
           </nav>
           <div class="nav-actions">
             <button class="icon-btn" data-open-search aria-label="Search">
@@ -159,12 +180,39 @@ const UI = {
       </div>
     </header>
     <div class="mobile-menu" id="mobile-menu">
-      <button class="close-mm icon-btn" data-close-menu aria-label="Close menu">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      <button
+        class="close-mm icon-btn"
+        data-close-menu
+        aria-label="Close menu"
+      >
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2.2"
+          stroke-linecap="round"
+        >
+          <path d="M18 6L6 18M6 6l12 12"/>
+        </svg>
       </button>
-      <a href="index.html">Home</a><a href="shop.html">Shop</a>
-      <a href="index.html#collections">Collections</a><a href="index.html#deals">Deals</a>
-      <a href="cart.html">Bag</a>
+      <a href="index.html">
+        Home
+      </a>
+      <a href="shop.html">
+        Shop
+      </a>
+      <a href="index.html#collections">
+        Collections
+      </a>
+      <a href="index.html#deals">
+        Deals
+      </a>
+      <a href="profile.html">
+        Account
+      </a>
+      <a href="cart.html">
+        Bag
+      </a>
     </div>`;
   },
 
